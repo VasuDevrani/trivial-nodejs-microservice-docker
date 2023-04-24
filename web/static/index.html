@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="./scripts/index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Trivial MicroService example using docker containers</h1>
+    <br />
+    <div class="user">
+      <h2>Users</h2>
+      <p>put user inside mongo db</p>
+      <input type="text" placeholder="name" class="username"/>
+      <button onclick="addUser()">Add now</button>
+    </div>
+    <div class="product">
+      <h2>Products</h2>
+      <p>put product inside mysql db</p>
+      <input type="text" placeholder="name" class="productname"/>
+      <input type="number" placeholder="price" class="productprice"/>
+      <button onclick="addProduct()">Add now</button>
+    </div>
+
+    <div class="list">
+        <div class="userList"></div>
+        <div class="productList"></div>
+    </div>
+  </body>
+</html>
