@@ -1,0 +1,11 @@
+FROM node:latest
+
+RUN npm i -g nodemon
+
+WORKDIR /app/products
+
+COPY . /app/products/
+
+RUN npm install
+
+CMD ["npm", "start"]
