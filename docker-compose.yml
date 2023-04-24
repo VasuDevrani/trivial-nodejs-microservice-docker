@@ -1,0 +1,49 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - users
+      # - products
+      - web
+    networks:
+      - prodnet01
+      - usernet01
+
+  users:
+    build: ./users
+    networks:
+      - usernet01
+
+  # products:
+  #   build: ./products
+  #   networks:
+  #     - prodnet01
+
+  web:
+    build: ./web
+
+  mongo:
+    image: mongo:latest
+    hostname: mongo-host
+    networks:
+      - usernet01
+    ports:
+        - "27017:27017"
+
+  mysql:
+    image: mysql:latest
+    hostname: myhost
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=productdb
+    ports:
+      - "3306:3306"
+    networks:
+      - prodnet01
+
+networks:
+  usernet01:
+  prodnet01:

@@ -1,8 +1,11 @@
 import mysql from "mysql2";
 
+// docker run -p 3306:3306 --name sql01 --network prodnet01 --hostname myhost -e MYSQL_DATABASE=productdb -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+// docker run --name prods --network prodnet01 -p 3002:3001 product01 
+
 // create connection
 const connection = mysql.createConnection({
-  // host: 'localhost',
+  // host: 'myhost',
   // port: 3306,
   user: "root",
   password: "123456",
