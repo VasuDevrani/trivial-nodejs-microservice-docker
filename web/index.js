@@ -15,6 +15,6 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/static/index.html");
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("server is listening at the port 3000");
 });

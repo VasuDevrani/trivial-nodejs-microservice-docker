@@ -4,8 +4,8 @@ const username = document.querySelector(".username");
 const productname = document.querySelector(".productname");
 const price = document.querySelector(".productprice");
 
-const USER_URL = "http://localhost:3001/";
-const PRODUCT_URL = "http://localhost:3002/";
+const USER_URL = "http://localhost:80/users";
+const PRODUCT_URL = "http://localhost:80/products";
 
 const addUser = () => {
   if (username.value === "") return;

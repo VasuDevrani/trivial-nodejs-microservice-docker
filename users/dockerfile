@@ -2,10 +2,12 @@ FROM node:latest
 
 RUN npm i -g nodemon
 
-WORKDIR /app/usr
+WORKDIR /app/users
 
-COPY . /app/usr/
+COPY . /app/users/
 
 RUN npm install
+
+EXPOSE 5000
 
 CMD ["npm", "start"]

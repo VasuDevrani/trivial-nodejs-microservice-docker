@@ -22,7 +22,7 @@ mongoose
     console.log("MongoDB Connection Error: ", err);
   });
 
-app.use("/", userRoutes);
+app.use("/users", userRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("server is listening at the port 3000");

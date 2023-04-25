@@ -12,7 +12,7 @@ app.use(express.json());
 // routes
 import productRoutes from './routes/productRoute.js'
 
-app.use('/', productRoutes);
+app.use('/products', productRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log('server is listening at the port 3001');

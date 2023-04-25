@@ -1,5 +1,5 @@
 // import pool from "../config/db.config.js";
-import pool from './db.js'
+import pool from './db.config.js'
 
 class Product {
   constructor(products) {
