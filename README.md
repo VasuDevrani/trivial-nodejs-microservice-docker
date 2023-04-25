@@ -18,3 +18,14 @@
 - Create and read operations on Users and products using their Rest APIs
 - Web serves client page at '/' for basic demonstration
 - intermicroservice communication not included for simplicity 
+
+## Pre-reqs
+- [Docker](https://www.docker.com/)
+- [Docker-Compose](https://docs.docker.com/compose/)
+
+## Run
+- ``` docker-compose up ```
+- access
+  - Web: http://localhost:80/
+  - Products API: http://localhost:80/products (create product, list products)
+  - Users API: http://localhost:80/users (create user, list users)
